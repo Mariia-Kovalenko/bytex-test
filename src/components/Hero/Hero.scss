@@ -1,0 +1,94 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+
+.hero {
+    padding-top: 20px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    &__photos {
+        height: 420px;
+        max-width: 725px;
+
+        margin-top: -100px;
+
+        display: flex;
+        align-items: center;
+
+        & img {
+            @include mixins.image;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.photo-small {
+    max-height: 316px;
+    max-width: 170px;
+}
+
+.photo-main {
+    max-width: 260px;
+    border: 3px solid white;
+    // z-index: 2;
+}
+
+.title {
+    font-size: variables.$font-size-large;
+    font-weight: 400;
+    color: variables.$blue;
+    max-width: 500px;
+    margin: 40px 0 30px;
+}
+
+.list-item {
+    display: flex;
+    gap: 15px;
+
+    &__icon {
+        background-color: variables.$yellow;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        @include mixins.element-center;
+        
+        & img {
+            height: 20px;
+            width: 20px;
+        }
+    
+        &.large {
+            height: 40px;
+            width: 40px;
+    
+            & img {
+                height: 25px;
+                width: 25px;
+            }
+        }
+    }
+
+    &__text {
+        padding-top: 5px;
+    }
+}
+
+.rectangle {
+    height: 190px;
+    width: 130px;
+    background: variables.$yellow-gradient;
+}

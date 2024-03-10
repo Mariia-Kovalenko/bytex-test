@@ -1,0 +1,45 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+
+.review {
+    border-radius: 8px;
+    border: 1px solid rgba(237, 237, 237, 1);
+    box-shadow: variables.$shadow;
+
+    padding: 16px;
+    max-width: 416px;
+
+    font-size: variables.$font-size-small;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    &__user {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__details {
+        display: flex;
+        gap: 10px;
+        color:  #828282;
+
+    }
+}
+
+.avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: variables.$blue;
+
+    & img {
+        @include mixins.image;
+    }
+}
+.rating {
+    display: flex;
+    gap: 3px;
+}

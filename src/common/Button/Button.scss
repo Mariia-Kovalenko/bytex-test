@@ -1,0 +1,15 @@
+@use '../../styles/variables';
+
+.button {
+    background-color: variables.$blue;
+    height: 56px;
+    width: 370px;
+    border-radius: 5px;
+    color: white;
+    font-size: variables.$font-size-medium;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}

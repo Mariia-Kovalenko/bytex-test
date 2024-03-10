@@ -1,0 +1,20 @@
+@use '../../styles/variables';
+
+.header {
+    height: 36px;
+    background-color: variables.$yellow;
+    color: variables.$grey-text;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 11px;
+}
+
+.delimiter {
+    height: 11px;
+    width: 0.8px;
+    background-color: variables.$grey-text;
+    margin: 0 20px;
+}
