@@ -1,0 +1,57 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+
+.hero {
+    &__gallery {
+        height: 420px;
+        max-width: 720px;
+        // margin-top: -100px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+
+        & img {
+            @include mixins.image;
+            z-index: 2;
+        }
+    }
+}
+
+.photo-small {
+    max-height: 70%;
+    // max-width: 170px;
+    max-width: 20%;
+}
+
+.photo-main {
+    // max-width: 260px;
+    border: 3px solid white;
+    // z-index: 2;
+    max-width: 30%;
+}
+
+
+.rectangle {
+    height: 40%;
+    width: 70px;
+    background: variables.$yellow-gradient;
+    max-width: 15%;
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        &__gallery {
+            height: 320px;
+        }
+    }
+}
+@media screen and (max-width: 560px) {
+    .hero {
+        &__gallery {
+            height: 220px;
+        }
+    }
+}

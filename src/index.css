@@ -34,6 +34,13 @@ ul, li {
   padding: 0 15px;
 }
 
+button {
+  outline: none;
+  border: none;
+  font: inherit;
+  background-color: transparent;
+  display: block;
+}
 
 img {
   display: block;

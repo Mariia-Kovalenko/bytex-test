@@ -1,19 +1,22 @@
 import Button from "../../common/Button/Button";
+import HeroGallery from "../../common/HeroGallery/HeroGallery";
 import Review from "../../common/Review/Review";
 import "./Hero.scss";
 
 export default function Hero() {
+    const images = ["./product-2.jpg", "product-1.jpg", "product-3.jpg"];
+
     return (
         <div className="hero">
             <div className="container">
                 <div className="logo">
                     <img src="./LOGO.svg" alt="logo" />
                 </div>
-                <h1 className="title">
-                    Don’t apologize for being comfortable.
-                </h1>
 
                 <div className="hero__inner">
+                    <h1 className="title">
+                        Don’t apologize for being comfortable.
+                    </h1>
                     <div className="hero__content">
                         <ul className="hero__list">
                             <li className="hero__list-item list-item">
@@ -57,25 +60,7 @@ export default function Hero() {
                         />
                     </div>
                     <div className="hero__banner">
-                        <div className="hero__photos">
-                            <div className="rectangle"></div>
-                            <img
-                                className="photo-small"
-                                src="./product-2.jpg"
-                                alt="product"
-                            />
-                            <img
-                                className="photo-main"
-                                src="./product-1.jpg"
-                                alt="product"
-                            />
-                            <img
-                                className="photo-small"
-                                src="./product-3.jpg"
-                                alt="product"
-                            />
-                            <div className="rectangle"></div>
-                        </div>
+                        <HeroGallery images={images} />
                     </div>
                 </div>
             </div>

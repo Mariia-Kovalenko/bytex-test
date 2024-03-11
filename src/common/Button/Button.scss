@@ -13,3 +13,9 @@
     align-items: center;
     gap: 12px;
 }
+
+@media screen and (max-width: 560px) {
+    .button {
+        width: 100%;
+    }
+}
