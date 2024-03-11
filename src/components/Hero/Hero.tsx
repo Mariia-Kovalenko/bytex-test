@@ -1,10 +1,29 @@
 import Button from "../../common/Button/Button";
 import HeroGallery from "../../common/HeroGallery/HeroGallery";
 import Review from "../../common/Review/Review";
+import SliderCarousel from "../../common/Slider/Slider";
 import "./Hero.scss";
 
 export default function Hero() {
     const images = ["./product-2.jpg", "product-1.jpg", "product-3.jpg"];
+
+    const slides = [
+        "./sponsor-1.svg",
+        "./sponsor-2.svg",
+        "./sponsor-3.svg",
+        "./sponsor-4.svg",
+        "./sponsor-5.svg",
+    ];
+
+    const renderSlides = () => {
+        return slides.map((image, i) => {
+            return (
+                <div key={i} className="slide">
+                    <img className="sponsor-image" src={image} alt="alt" />
+                </div>
+            );
+        });
+    };
 
     return (
         <div className="hero">
@@ -62,6 +81,17 @@ export default function Hero() {
                     <div className="hero__banner">
                         <HeroGallery images={images} />
                     </div>
+                </div>
+            </div>
+            <div className="sponsors">
+                <div className="sponsors__text">as seen in</div>
+                <div className="background-gradient"></div>
+                <div className="container">
+                    <SliderCarousel
+                        slides={renderSlides()}
+                        slidesToScroll={1}
+                        slidesToShow={5}
+                    />
                 </div>
             </div>
         </div>

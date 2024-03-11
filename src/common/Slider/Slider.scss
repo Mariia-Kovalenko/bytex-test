@@ -1,0 +1,29 @@
+@use '../../styles/variables';
+
+.slider-container {
+  height: fit-content;
+}
+
+.slide {
+    color: #3498db;
+    text-align: center;
+    height: fit-content;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 10px;
+
+    & img {
+      width: 100%;
+      // height: 50px;
+      object-fit: contain;
+    }
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: variables.$blue;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    color:  variables.$blue;
+  }

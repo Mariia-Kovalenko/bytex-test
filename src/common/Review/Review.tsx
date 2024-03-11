@@ -1,4 +1,4 @@
-import "./Rating.scss";
+import "./Review.scss";
 
 interface IReviewProps {
     name: string;

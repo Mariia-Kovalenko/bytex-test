@@ -27,6 +27,8 @@
 
         display: flex;
         align-items: center;
+
+        margin-bottom: 40px;
     }
 
     &__list {
@@ -79,6 +81,43 @@
 
     &__text {
         padding-top: 5px;
+    }
+}
+
+.background-gradient {
+    height: 500px;
+    width: 100%;
+    background: variables.$yellow-gradient;
+    transform: rotate(180deg);
+    position: absolute;
+    top: -40px;
+    z-index: -1;
+}
+
+.sponsors {
+    position: relative;
+    padding-top: 20px;
+
+    &__text {
+        color: variables.$light-grey;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+.sponsor-image {
+    height: 50px;
+}
+
+@media screen and (max-width: 768px){
+    .sponsor-image {
+        height: 40px;
+    }
+}
+@media screen and (max-width: 560px){
+    .sponsor-image {
+        height: 36px;
     }
 }
 
