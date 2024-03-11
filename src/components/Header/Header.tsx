@@ -1,17 +1,13 @@
 import React from "react";
 import useDeviceWidth from "../../hooks/useDeviceWidth";
 import "./Header.scss";
+import { OFFERS } from "../../utils/constants";
 
-const offers = [
-    "CONSCIOUSLY MADE BUTTER SOFT STAPLES FOR EVERY DAY (OR NIGHT)",
-    "FREE SHIPPING on orders > $200",
-    "easy 45 day return window",
-];
 
 export default function Header() {
     const deviceWidth = useDeviceWidth();
 
-    let itemsToRender = offers;
+    let itemsToRender = OFFERS;
 
     return (
         <header className="header">
@@ -27,7 +23,7 @@ export default function Header() {
                     );
                 })
             ) : (
-                <div className="offer">{offers[1]}</div>
+                <div className="offer">{OFFERS[1]}</div>
             )}
         </header>
     );

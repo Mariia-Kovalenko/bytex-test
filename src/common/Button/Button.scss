@@ -1,4 +1,5 @@
 @use '../../styles/variables';
+@use '../../styles/mixins';
 
 .button {
     background-color: variables.$blue;
@@ -8,10 +9,10 @@
     color: white;
     font-size: variables.$font-size-medium;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixins.element-center;
     gap: 12px;
+
+    cursor: pointer;
 }
 
 @media screen and (max-width: 560px) {
