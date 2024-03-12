@@ -1,3 +1,5 @@
+export const PRODUCT_BUTTON_TEXT = 'Customize Your Outfit';
+
 export const OFFERS = [
     "CONSCIOUSLY MADE BUTTER SOFT STAPLES FOR EVERY DAY (OR NIGHT)",
     "FREE SHIPPING on orders > $200",
@@ -100,5 +102,14 @@ export const PRODUCT_PHOTOS = [
     "./product-2.jpg",
     "./product-2.jpg",
 ];
+
+export const FOUNDER_INFO = `Hi! My name’s [Insert Name], and I founded [Insert] in ____. \n
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat. 
+\nFusce non nibh luctus, dignissim risus quis, bibendum dolor. Donec placerat volutpat ligula, 
+ac consectetur felis varius non. Aliquam a nunc rutrum, porttitor dolor eu, pellentesque est. Vivamus id arcu congue, faucibus libero nec, placerat ligula. 
+\nOrci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu nisl a metus ultrices sodales. 
+\nFusce non ante velit. Sed auctor odio eu semper molestie.Nam mattis, sapien eget lobortis fringilla, eros ipsum tristique tellus, ac convallis urna massa at nibh. 
+\nDuis non fermentum augue. Vivamus laoreet aliquam risus, sed euismod leo aliquam ut. Vivamus in felis eu lacus feugiat aliquam nec in sapien. 
+\nCras mattis varius mollis.`
 
 export const REVIEWS = [];
