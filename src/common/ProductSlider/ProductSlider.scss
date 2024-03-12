@@ -1,0 +1,106 @@
+@use '../../styles/mixins';
+@use '../../styles/variables';
+
+.product-slider {
+    max-height: 650px;
+    min-width: 300px;
+    width: 500px;
+    position: relative;
+}
+
+.current-slide {
+    max-height: 100%;
+    width: 85%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    & img {
+        @include mixins.image;
+    }
+}
+
+.product-name {
+    font-size: variables.$font-size-medium;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.all-slides {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+
+    &__item {
+        height: 40px;
+        width: 40px;
+        border: 2px solid transparent;
+
+        &.active {
+            border: 2px solid white;
+        }
+
+        & img {
+            @include mixins.image;
+        }
+    }
+}
+
+.arrows {
+    & button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        cursor: pointer;
+    }
+}
+
+.prev {
+    left: 0px;
+}
+
+.next {
+    right: 0px;
+}
+
+@media screen and (max-width: 1024px) {
+    .product-slider, .current-slide {
+        max-height: 600px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .product-slider {
+        width: calc(100% - 20px);
+    }
+
+    .all-slides {
+        &__item {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .all-slides {
+        bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .product-slider, .current-slide {
+        max-height: 500px;
+    }
+    .all-slides {
+        gap: 5px;
+        &__item {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}

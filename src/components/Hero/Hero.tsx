@@ -2,6 +2,7 @@ import Button from "../../common/Button/Button";
 import HeroGallery from "../../common/HeroGallery/HeroGallery";
 import Review from "../../common/Review/Review";
 import SliderCarousel from "../../common/Slider/Slider";
+import Title from "../../common/Title/Title";
 import {
     FEATURED_REVIEW,
     HERO_BULLET_POINTS,
@@ -29,9 +30,9 @@ export default function Hero() {
                 </div>
 
                 <div className="hero__inner">
-                    <h1 className="title">
-                        Don’t apologize for being comfortable.
-                    </h1>
+                    <div className="hero__title">
+                        <Title type='main' text={'Don’t apologize for being comfortable.'} /> 
+                    </div>
                     <div className="hero__content">
                         <ul className="hero__list">
                             {HERO_BULLET_POINTS.map(
