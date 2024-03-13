@@ -1,6 +1,12 @@
 @use "./styles/variables";
 @use "./styles/mixins";
 
+.rectangle {
+    height: 40%;
+    width: 130px;
+    background: variables.$yellow-gradient;
+}
+
 .list-item {
     display: flex;
     gap: 15px;

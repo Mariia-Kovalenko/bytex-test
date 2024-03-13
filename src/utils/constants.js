@@ -158,3 +158,49 @@ export const REVIEWS = [
     },
     
 ];
+
+
+export const FAQs = [
+    {
+        question: 'lorem ipsum dolor sit amet',
+        answer: `Lorem ipsum dolor sit amet, 
+        consectetur adipiscing elit. Fusce lobortis sapien 
+        facilisis tincidunt pellentesque. 
+        In eget ipsum et felis finibus consequat.`
+    },
+    {
+        question: 'lorem ipsum dolor sit amet',
+        answer: `Lorem ipsum dolor sit amet, 
+        consectetur adipiscing elit. Fusce lobortis sapien 
+        facilisis tincidunt pellentesque. 
+        In eget ipsum et felis finibus consequat.`
+    },
+    {
+        question: 'lorem ipsum dolor sit amet',
+        answer: `Lorem ipsum dolor sit amet, 
+        consectetur adipiscing elit. Fusce lobortis sapien 
+        facilisis tincidunt pellentesque. 
+        In eget ipsum et felis finibus consequat.`
+    },
+    {
+        question: 'lorem ipsum dolor sit amet',
+        answer: `Lorem ipsum dolor sit amet, 
+        consectetur adipiscing elit. Fusce lobortis sapien 
+        facilisis tincidunt pellentesque. 
+        In eget ipsum et felis finibus consequat.`
+    },
+    {
+        question: 'lorem ipsum dolor sit amet',
+        answer: `Lorem ipsum dolor sit amet, 
+        consectetur adipiscing elit. Fusce lobortis sapien 
+        facilisis tincidunt pellentesque. 
+        In eget ipsum et felis finibus consequat.`
+    },
+    {
+        question: 'lorem ipsum dolor sit amet',
+        answer: `Lorem ipsum dolor sit amet, 
+        consectetur adipiscing elit. Fusce lobortis sapien 
+        facilisis tincidunt pellentesque. 
+        In eget ipsum et felis finibus consequat.`
+    },
+]

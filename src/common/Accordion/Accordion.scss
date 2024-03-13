@@ -1,0 +1,47 @@
+@use '../../styles/variables';
+
+.accordion {
+    overflow: hidden;
+    border-top: 1px solid rgba(234, 234, 234, 1);
+    &__item {
+        border-bottom: 1px solid rgba(234, 234, 234, 1);
+        overflow: hidden;
+    }
+}
+
+.question {
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    &-content {
+        font-size: variables.$font-size-medium;
+        color: variables.$blue;
+    }
+}
+
+.answer {
+    &-container {
+        transition: height .7s ease-in-out;
+    }
+    &-content {
+        padding: 0 40px 20px 0;
+    }
+}
+
+.accordion-toggle {
+    transition: .7s;
+    &::before {
+        content: '+';
+        font-size: 35px;
+    }
+
+    &.active::before {
+        content: '-';
+        font-size: 35px;
+    }
+}
