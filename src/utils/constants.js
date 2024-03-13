@@ -133,4 +133,28 @@ export const PRODUCT_FEATURES = [
     },
 ]
 
-export const REVIEWS = [];
+export const REVIEWS = [
+    {
+        username: 'Jane, S.',
+        rating: 5,
+        text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Pellentesque sed sollicitudin dolor, non sodales justo. 
+        Aenean eget aliquet mi.`
+    },
+    {
+        username: 'Jane, S.',
+        rating: 5,
+        text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Pellentesque sed sollicitudin dolor, non sodales justo. 
+        Aenean eget aliquet mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Pellentesque sed sollicitudin dolor, non sodales.`
+    },
+    {
+        username: 'Jane, S.',
+        rating: 5,
+        text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Pellentesque sed sollicitudin dolor, non sodales justo. 
+        Aenean eget aliquet mi.`
+    },
+    
+];

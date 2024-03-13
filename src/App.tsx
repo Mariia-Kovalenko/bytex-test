@@ -4,6 +4,7 @@ import Description from "./components/Description/Description";
 import FounderInfo from "./components/FounderInfo/FounderInfo";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
+import Reviews from "./components/Reviews/Reviews";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
             <Benefits />
             <FounderInfo />
             <Description />
+            <Reviews />
         </div>
     );
 }

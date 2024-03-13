@@ -50,24 +50,6 @@
     }
 }
 
-.arrows {
-    & button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-
-        cursor: pointer;
-    }
-}
-
-.prev {
-    left: 0px;
-}
-
-.next {
-    right: 0px;
-}
-
 @media screen and (max-width: 1024px) {
     .product-slider, .current-slide {
         max-height: 600px;

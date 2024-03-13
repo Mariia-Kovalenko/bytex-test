@@ -26,6 +26,11 @@
         display: flex;
         color:  #828282;
         gap: 15px;
+
+        &.column {
+            flex-direction: column-reverse;
+            gap: 5px;
+        }
     }
 }
 

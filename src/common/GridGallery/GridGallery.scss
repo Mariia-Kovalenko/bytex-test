@@ -1,0 +1,21 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.gallery-item {
+    & img {
+        @include mixins.image;
+    }
+}
+
+@media screen and (max-width: 1220px){
+    .grid-gallery {
+        grid-template-columns: repeat(18, 1fr);
+    }
+}

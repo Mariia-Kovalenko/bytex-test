@@ -87,7 +87,7 @@ export default function Description() {
                     )}
                 </div>
 
-                <div className="description__action">
+                <div className="action-button">
                     <Button text={PRODUCT_BUTTON_TEXT} onClick={() => {}} />
                     <Rating rating={5} info={FEATURED_REVIEW.info} />
                 </div>
