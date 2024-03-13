@@ -40,3 +40,28 @@
         padding-top: 5px;
     }
 }
+
+
+.dots {
+    display: flex;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot {
+    height: 20px;
+    width: 20px;
+    
+
+    &:before {
+        content: '•';
+        color: variables.$blue;
+        opacity: 0.2;
+    }
+
+    &.active:before {
+        opacity: 1;
+    }
+}

@@ -110,6 +110,27 @@ ac consectetur felis varius non. Aliquam a nunc rutrum, porttitor dolor eu, pell
 \nOrci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed eu nisl a metus ultrices sodales. 
 \nFusce non ante velit. Sed auctor odio eu semper molestie.Nam mattis, sapien eget lobortis fringilla, eros ipsum tristique tellus, ac convallis urna massa at nibh. 
 \nDuis non fermentum augue. Vivamus laoreet aliquam risus, sed euismod leo aliquam ut. Vivamus in felis eu lacus feugiat aliquam nec in sapien. 
-\nCras mattis varius mollis.`
+\nCras mattis varius mollis.`;
+
+export const PRODUCT_FEATURES = [
+    {
+        icon: './cart-icon.svg',
+        alt: 'cart',
+        title: 'You save.',
+        description: 'Browse our comfort sets and save 15% when you bundle.'
+    },
+    {
+        icon: './shipping-icon.svg',
+        alt: 'shipping',
+        title: 'We ship.',
+        description: 'We ship your items within 1-2 days of receiving your order.'
+    },
+    {
+        icon: './sun-icon.svg',
+        alt: 'sun',
+        title: 'You enjoy!',
+        description: 'Wear hernest around the house, out on the town, or in bed.'
+    },
+]
 
 export const REVIEWS = [];

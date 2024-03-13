@@ -6,6 +6,7 @@ import Title from "../../common/Title/Title";
 import {
     FEATURED_REVIEW,
     HERO_BULLET_POINTS,
+    PRODUCT_BUTTON_TEXT,
     PRODUCT_IMAGES,
     SPONSOR_SLIDES,
 } from "../../utils/constants";
@@ -49,7 +50,7 @@ export default function Hero() {
                             )}
                         </ul>
                         <Button
-                            text="Customize Your Outfit"
+                            text={PRODUCT_BUTTON_TEXT}
                             onClick={() => {}}
                         />
                         <Review

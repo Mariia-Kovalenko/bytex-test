@@ -1,0 +1,8 @@
+.rating {
+    display: flex;
+    gap: 3px;
+    &-container {
+        display: flex;
+        gap: 10px;
+    }
+}

@@ -1,3 +1,5 @@
+import { start } from "repl";
+import Rating from "../Rating/Rating";
 import "./Review.scss";
 
 interface IReviewProps {
@@ -14,12 +16,6 @@ export default function Review({
     avatar,
     info,
 }: IReviewProps) {
-    const stars = [];
-
-    for (let i = 0; i < rating; i++) {
-        stars.push(<img key={i} src="./star.svg" alt="star" />);
-    }
-
     return (
         <div className="review">
             <div className="review__user">
@@ -28,8 +24,7 @@ export default function Review({
                 </div>
                 <div className="review__details">
                     <h4 className="review__name">{name}</h4>
-                    <div className="rating">{stars}</div>
-                    {info && <div className="review__info">{info}</div>}
+                    <Rating rating={rating} info={info} />
                 </div>
             </div>
             <div className="review__text">{text}</div>
