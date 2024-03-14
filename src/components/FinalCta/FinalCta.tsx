@@ -32,7 +32,7 @@ export default function FinalCta() {
                             <div className="delimiter"></div>
                             <div className="payment__option">
                                 <img
-                                    src="./payment-options.jpg"
+                                    src="./payment-options.png"
                                     alt="payment"
                                 />
                             </div>

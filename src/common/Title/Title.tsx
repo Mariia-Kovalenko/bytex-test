@@ -7,5 +7,5 @@ export default function Title({
     type: "main" | "section";
     text: string;
 }) {
-    return <h1 className={`title ${type}`}>{text}</h1>;
+    return <h1 className={`title ${type}-title`}>{text}</h1>;
 }

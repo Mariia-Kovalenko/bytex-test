@@ -26,35 +26,37 @@ export default function ProductSlider({
     };
 
     return (
-            <div className="product-slider">
-                <div className="current-slide">
-                    <img
-                        src={slides[currentSlide]}
-                        alt={`product-${currentSlide}`}
-                    />
-                </div>
-                <div className="all-slides">
-                    {slides.map((photo, i) => (
-                        <button
-                            className={`all-slides__item ${
-                                currentSlide === i ? "active" : ""
-                            }`}
-                            onClick={() => changeSlide(i)}
-                        >
-                            <img src={photo} alt={`produc-${i}`} />
-                        </button>
-                    ))}
-                </div>
-                <div className="arrows">
-                    <button className="prev" onClick={goToPreviousSlide}>
-                        <img src="./arrow-left.svg" alt="prev" />
-                    </button>
-                    <button className="next" onClick={goToNextSlide}>
-                        <img src="./arrow-right.svg" alt="prev" />
-                    </button>
-                </div>
-                <div className="product-name">{productName}</div>
+        <div className="product-slider">
+            <div className="current-slide">
+                <img
+                    src={slides[currentSlide]}
+                    alt={`product-${currentSlide}`}
+                />
             </div>
-            
+            <div className="all-slides">
+                {slides.map((photo, i) => (
+                    <button
+                        className={`all-slides__item ${
+                            currentSlide === i ? "active" : ""
+                        }`}
+                        onClick={() => changeSlide(i)}
+                    >
+                        <img src={photo} alt={`produc-${i}`} />
+                    </button>
+                ))}
+            </div>
+            <div className="arrows">
+                <button
+                    className="arrow-button prev"
+                    onClick={goToPreviousSlide}
+                >
+                    <img src="./arrow-left.svg" alt="prev" />
+                </button>
+                <button className="arrow-button next" onClick={goToNextSlide}>
+                    <img src="./arrow-right.svg" alt="prev" />
+                </button>
+            </div>
+            <div className="product-name">{productName}</div>
+        </div>
     );
 }

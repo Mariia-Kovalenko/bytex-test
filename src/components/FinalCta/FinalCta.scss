@@ -2,6 +2,7 @@
 @use '../../styles/mixins';
 
 .final {
+    padding-top: 100px;
     position: relative;
     &__inner {
         @include mixins.column-center;
@@ -48,5 +49,9 @@
 @media screen and (max-width: 560px){
     .shipping {
         display: none;
+    }
+
+    .payment__text {
+        font-size: variables.$font-size-small;
     }
 }

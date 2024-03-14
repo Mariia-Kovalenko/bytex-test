@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import GridGallery from "../../common/GridGallery/GridGallery";
+import GridGallery from "../../common/GridGallery/GridGAllery";
 import Review from "../../common/Review/Review";
 import SliderCarousel from "../../common/Slider/Slider";
 import Title from "../../common/Title/Title";

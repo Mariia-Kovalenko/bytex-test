@@ -1,4 +1,4 @@
-import './HeroGalery.scss';
+import "./HeroGalery.scss";
 
 export default function HeroGallery({ images }: { images: string[] }) {
     return (

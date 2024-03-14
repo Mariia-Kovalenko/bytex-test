@@ -5,7 +5,7 @@ import "./Benefits.scss";
 
 export default function Benefits() {
     return (
-        <div className="benefits">
+        <section className="benefits">
             <div className="container">
                 <div className="benefits__inner">
                     <Title
@@ -36,6 +36,6 @@ export default function Benefits() {
                     
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

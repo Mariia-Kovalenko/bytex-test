@@ -1,15 +1,16 @@
-@use '../../styles/mixins';
-@use '../../styles/variables';
+@use "../../styles/mixins";
+@use "../../styles/variables";
 
 .product-slider {
     max-height: 650px;
     min-width: 300px;
-    width: 500px;
+    width: 480px;
     position: relative;
+    margin-right: 20px;
 }
 
 .current-slide {
-    max-height: 100%;
+    height: 100%;
     width: 85%;
     position: relative;
     left: 50%;
@@ -34,7 +35,6 @@
     left: 50%;
     transform: translateX(-50%);
 
-
     &__item {
         height: 40px;
         width: 40px;
@@ -51,13 +51,14 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .product-slider, .current-slide {
+    .product-slider,
+    .current-slide {
         max-height: 600px;
     }
 }
 @media screen and (max-width: 768px) {
     .product-slider {
-        width: calc(100% - 20px);
+        width: calc(100% - 50px);
     }
 
     .all-slides {
@@ -70,16 +71,21 @@
 
 @media screen and (max-width: 530px) {
     .all-slides {
-        bottom: 50px;
+        bottom: 40px;
+    }
+
+    .current-slide {
+        width: 90%;
     }
 }
 
 @media screen and (max-width: 420px) {
-    .product-slider, .current-slide {
+    .product-slider,
+    .current-slide {
         max-height: 500px;
     }
     .all-slides {
-        gap: 5px;
+        gap: 3px;
         &__item {
             width: 25px;
             height: 25px;

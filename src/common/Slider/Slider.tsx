@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from "react";
 import "./Slider.scss";
-import { JsxElement } from "typescript";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -30,17 +28,17 @@ const SliderCarousel = ({
                 breakpoint: 1200,
                 settings: {
                     slidesToShow: 4,
-                    dots: true
-                }
+                    dots: true,
+                },
             },
             {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 3,
-                    dots: true
-                }
+                    dots: true,
+                },
             },
-        ]
+        ],
     };
 
     console.log(slides);

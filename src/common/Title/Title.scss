@@ -5,12 +5,12 @@
     font-weight: 400;
     color: variables.$blue;
 
-    &.section {
+    &.section-title {
         font-size: variables.$font-size-title;
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1160px) {
     .title{
         font-size: 26px;
         text-align: center;

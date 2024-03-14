@@ -1,5 +1,4 @@
-import { useDebugValue, useRef, useState } from "react";
-import SliderCarousel from "../../common/Slider/Slider";
+import { useRef,} from "react";
 import Title from "../../common/Title/Title";
 import {
     FEATURED_REVIEW,

@@ -1,7 +1,7 @@
 
 
 .benefits {
-    padding-top: 110px;
+    padding: 100px 0 60px;
 
     &__list {
         display: flex;
@@ -41,7 +41,10 @@
                 margin: 0 auto;
 
                 padding-bottom: 40px;
-                border-bottom: 1.3px solid rgba(196, 196, 196, 0.5);
+                
+                &:not(:last-child) {
+                    border-bottom: 1.3px solid rgba(196, 196, 196, 0.5);
+                }
 
                 & .list-item__content {
                     text-align: center;

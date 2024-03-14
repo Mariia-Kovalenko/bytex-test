@@ -5,7 +5,7 @@ import "./FounderInfo.scss";
 
 export default function FounderInfo() {
     return (
-        <div className="founder">
+        <section className="founder">
             <div className="container">
                 <div className="founder__inner">
                     <div className="founder__banner">
@@ -33,6 +33,6 @@ export default function FounderInfo() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
