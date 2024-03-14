@@ -1,0 +1,52 @@
+@use '../../styles/variables';
+@use '../../styles/mixins';
+
+.final {
+    position: relative;
+    &__inner {
+        @include mixins.column-center;
+    }
+
+    &__action {
+        margin-top: 50px;
+        @include mixins.column-center;
+        gap: 5px;
+        margin-bottom: 30px;
+    }
+}
+
+.payment {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &__text {
+        color: variables.$green;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+}
+
+.shipping {
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 10px 20px;
+        max-width: 210px;
+        &:nth-child(2) {
+            border-left: variables.$grey-border;
+            border-right: variables.$grey-border;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 560px){
+    .shipping {
+        display: none;
+    }
+}

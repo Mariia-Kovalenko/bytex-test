@@ -222,3 +222,18 @@ export const INFO_ITEMS =[
         text: 'of energy saved'
     },
 ]
+
+export const SHIPPING_INFO = [
+    {
+        icon: './shipping-icon_grey.svg',
+        text: 'FREE Shipping on Orders over $200'
+    },
+    {
+        icon: './shield-icon.svg',
+        text: 'Over 500+ 5 Star Reviews Online'
+    },
+    {
+        icon: './cart-icon_grey.svg',
+        text: 'Made ethically and responsibly.'
+    },
+]

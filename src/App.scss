@@ -1,10 +1,49 @@
 @use "./styles/variables";
 @use "./styles/mixins";
 
+.section {
+    padding: 30px 0;
+}
+
+.delimiter {
+    width: 1px;
+    height: 100%;
+    min-height: 10px;
+    background-color: variables.$delimiter-color;
+}
+
+.background-gradient {
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+
+    &.top {
+        top: 0;
+        background: variables.$yellow-gradient-top;
+    }
+
+    &.bottom {
+        bottom: 0;
+        background: variables.$yellow-gradient;
+    }
+}
+
 .rectangle {
     height: 40%;
     width: 130px;
     background: variables.$yellow-gradient;
+}
+
+.section-title-center {
+    @include mixins.column-center;
+    gap: 15px;
+    margin: 0 auto 30px;
+    max-width: 600px;
+}
+
+.subtitle {
+    text-align: center;
 }
 
 .list-item {
@@ -96,4 +135,11 @@
 
 .next {
     right: 0px;
+}
+
+
+@media screen and (max-width: 768px){
+    .section-title-center {
+        max-width: 100%;
+    }
 }
