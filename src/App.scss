@@ -128,27 +128,23 @@
     margin: 0 auto;
 }
 
+.arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 
-.arrows {
-    & button {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+    cursor: pointer;
 
-        cursor: pointer;
+    &.prev {
+        left: -30px;
+    }
+
+    &.next {
+        right: -30px;
     }
 }
 
-.prev {
-    left: 0px;
-}
-
-.next {
-    right: 0px;
-}
-
-
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .section-title-center {
         max-width: 100%;
     }

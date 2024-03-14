@@ -1,4 +1,4 @@
-import { useDebugValue, useState } from "react";
+import { useDebugValue, useRef, useState } from "react";
 import SliderCarousel from "../../common/Slider/Slider";
 import Title from "../../common/Title/Title";
 import {
@@ -7,84 +7,81 @@ import {
     PRODUCT_FEATURES,
 } from "../../utils/constants";
 import "./Description.scss";
-import useDeviceWidth from "../../hooks/useDeviceWidth";
 import Button from "../../common/Button/Button";
 import Rating from "../../common/Rating/Rating";
+import Slider from "react-slick";
+
+export function PrevArrow({ moveToPrev }: { moveToPrev: () => void }) {
+    return (
+        <button className="arrow-button prev" onClick={moveToPrev}>
+            <img src="./arrow-left.svg" alt="prev" />
+        </button>
+    );
+}
+export function NextArrow({ moveToNext }: { moveToNext: () => void }) {
+    return (
+        <button className="arrow-button next" onClick={moveToNext}>
+            <img src="./arrow-right.svg" alt="next" />
+        </button>
+    );
+}
 
 export default function Description() {
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const deviceWidth = useDeviceWidth();
-
+    const sliderRef = useRef<Slider>(null);
     const slides = PRODUCT_FEATURES;
 
-    const changeSlide = (num: number) => {
-        setCurrentSlide(num);
-    };
+    const renderCards = () =>
+        slides.map(({ icon, alt, title, description }) => (
+            <Card
+                icon={icon}
+                alt={alt}
+                title={title}
+                description={description}
+            />
+        ));
 
-    const goToNextSlide = () => {
-        setCurrentSlide(
-            currentSlide === slides.length - 1 ? 0 : currentSlide + 1
-        );
-    };
-    const goToPreviousSlide = () => {
-        setCurrentSlide(
-            currentSlide === 0 ? slides.length - 1 : currentSlide - 1
-        );
+    const settings = {
+        dots: false,
+        arrows: true,
+        className: "center",
+        infinite: false,
+        centerPadding: "60px",
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        swipeToSlide: false,
+        nextArrow: <NextArrow moveToNext={() => sliderRef.current?.slickNext()} />,
+        prevArrow: <PrevArrow moveToPrev={() => sliderRef.current?.slickPrev()} />,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    dots: true,
+                    arrows: true,
+                },
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true,
+                    arrows: true,
+                },
+            },
+        ],
     };
 
     return (
         <div className="description">
             <div className="container">
-                <Title type="section" text="Comfort made easy" />
+                <div className="section-title-center">
+                    <Title type="section" text="Comfort made easy" />
+                </div>
 
                 <div className="description__content">
-                    <div className="description__cards">
-                        {deviceWidth < 900 ? (
-                            <Card
-                                icon={slides[currentSlide].icon}
-                                alt={slides[currentSlide].alt}
-                                title={slides[currentSlide].title}
-                                description={slides[currentSlide].description}
-                            />
-                        ) : (
-                            slides.map(({ icon, alt, title, description }) => (
-                                <Card
-                                    icon={icon}
-                                    alt={alt}
-                                    title={title}
-                                    description={description}
-                                />
-                            ))
-                        )}
-                    </div>
-                    {deviceWidth < 900 && (
-                        <>
-                            <div className="arrows">
-                                <button
-                                    className="prev"
-                                    onClick={goToPreviousSlide}
-                                >
-                                    <img src="./arrow-left.svg" alt="prev" />
-                                </button>
-                                <button
-                                    className="next"
-                                    onClick={goToNextSlide}
-                                >
-                                    <img src="./arrow-right.svg" alt="next" />
-                                </button>
-                            </div>
-
-                            <div className="dots">
-                                {slides.map((_, i) => (
-                                    <div
-                                        className={`dot ${
-                                            currentSlide === i ? "active" : ""
-                                        }`}
-                                    ></div>
-                                ))}
-                            </div>
-                        </>
-                    )}
+                    <Slider ref={sliderRef} {...settings}>
+                        {renderCards()}
+                    </Slider>
                 </div>
 
                 <div className="action-button">
