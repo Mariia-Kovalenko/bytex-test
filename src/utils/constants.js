@@ -1,5 +1,7 @@
 export const PRODUCT_BUTTON_TEXT = 'Customize Your Outfit';
 
+export const HERO__TITLE ='Don’t apologize for being comfortable.';
+
 export const OFFERS = [
     "CONSCIOUSLY MADE BUTTER SOFT STAPLES FOR EVERY DAY (OR NIGHT)",
     "FREE SHIPPING on orders > $200",
@@ -8,8 +10,8 @@ export const OFFERS = [
 
 export const PRODUCT_IMAGES = [
     "./product-2.jpg",
-    "product-1.jpg",
-    "product-3.jpg",
+    "./product-1.jpg",
+    "./product-3.jpg",
 ];
 
 export const SPONSOR_SLIDES = [
@@ -43,6 +45,7 @@ export const HERO_BULLET_POINTS = [
 
 export const FEATURED_REVIEW = {
     id: "1",
+    avatar: './avatar.png',
     user: "Amy P.",
     rating: 5,
     text: "Overjoyed with my Loungewear set. I have the jogger and the sweatshirt. Quality product on every level. From the compostable packaging, to the supplied washing bag, even the garments smells like fresh herbs when I first held them.",

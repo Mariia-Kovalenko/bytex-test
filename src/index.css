@@ -42,6 +42,6 @@ button {
   display: block;
 }
 
-img {
+img, a {
   display: block;
 }

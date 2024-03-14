@@ -10,11 +10,9 @@
     align-items: center;
 
     font-size: 11px;
-}
 
-.delimiter {
-    height: 11px;
-    width: 0.8px;
-    background-color: variables.$grey-text;
-    margin: 0 20px;
+    & .delimiter {
+        height: 11px;
+        margin: 0 20px;
+    }
 }

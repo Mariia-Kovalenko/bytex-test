@@ -6,6 +6,7 @@ import Title from "../../common/Title/Title";
 import {
     FEATURED_REVIEW,
     HERO_BULLET_POINTS,
+    HERO__TITLE,
     PRODUCT_BUTTON_TEXT,
     PRODUCT_IMAGES,
     SPONSOR_SLIDES,
@@ -24,21 +25,24 @@ export default function Hero() {
     };
 
     return (
-        <div className="hero">
+        <section className="hero">
             <div className="container">
-                <div className="logo">
+                <a href="#" className="logo">
                     <img src="./LOGO.svg" alt="logo" />
-                </div>
+                </a>
 
                 <div className="hero__inner">
                     <div className="hero__title">
-                        <Title type='main' text={'Don’t apologize for being comfortable.'} /> 
+                        <Title type="main" text={HERO__TITLE} />
                     </div>
                     <div className="hero__content">
                         <ul className="hero__list">
                             {HERO_BULLET_POINTS.map(
                                 ({ id, icon, alt, text }) => (
-                                    <li key={id} className="hero__list-item list-item">
+                                    <li
+                                        key={id}
+                                        className="hero__list-item list-item"
+                                    >
                                         <div className="list-item__icon">
                                             <img src={icon} alt={alt} />
                                         </div>
@@ -49,11 +53,9 @@ export default function Hero() {
                                 )
                             )}
                         </ul>
-                        <Button
-                            text={PRODUCT_BUTTON_TEXT}
-                            onClick={() => {}}
-                        />
+                        <Button text={PRODUCT_BUTTON_TEXT} onClick={() => {}} />
                         <Review
+                            avatar={FEATURED_REVIEW.avatar}
                             name={FEATURED_REVIEW.user}
                             text={FEATURED_REVIEW.text}
                             rating={FEATURED_REVIEW.rating}
@@ -67,7 +69,7 @@ export default function Hero() {
             </div>
             <div className="sponsors">
                 <div className="sponsors__text">as seen in</div>
-                <div className="background-gradient"></div>
+                <div className="background-gradient top"></div>
                 <div className="container">
                     <SliderCarousel
                         slides={renderSlides()}
@@ -76,6 +78,6 @@ export default function Hero() {
                     />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }

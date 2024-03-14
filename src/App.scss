@@ -1,6 +1,16 @@
 @use "./styles/variables";
 @use "./styles/mixins";
 
+.logo {
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1024px) {
+    .logo img {
+        margin: 0 auto;
+    }
+}
+
 .section {
     padding: 30px 0;
 }
