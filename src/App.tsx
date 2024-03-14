@@ -5,6 +5,7 @@ import Faq from "./components/FAQ/Faq";
 import FounderInfo from "./components/FounderInfo/FounderInfo";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
+import InfoBanner from "./components/InfoBanner/InfoBanner";
 import Reviews from "./components/Reviews/Reviews";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Description />
             <Reviews />
             <Faq />
+            <InfoBanner />
         </div>
     );
 }

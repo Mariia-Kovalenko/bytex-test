@@ -204,3 +204,21 @@ export const FAQs = [
         In eget ipsum et felis finibus consequat.`
     },
 ]
+
+export const INFO_ITEMS =[
+    {
+        icon: './co2-icon.svg',
+        title: '3,927 kg',
+        text: 'of CO2 saved'
+    },
+    {
+        icon: './h2o-icon.svg',
+        title: '2,546,167 days',
+        text: 'of drinking water saved'
+    },
+    {
+        icon: './energy-icon.svg',
+        title: '7,321 kWh',
+        text: 'of energy saved'
+    },
+]

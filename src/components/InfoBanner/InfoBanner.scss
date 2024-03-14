@@ -1,0 +1,47 @@
+@use "../../styles/variables";
+@use "../../styles/mixins";
+
+.info-banner {
+    background-color: variables.$grey-bg;
+    padding: 40px 0;
+    @include mixins.column-center;
+    gap: 30px;
+
+    &__inner {
+        display: flex;
+    }
+
+    &__item {
+        padding: 20px 60px;
+        @include mixins.column-center;
+        gap: 5px;
+        color: variables.$blue;
+
+        &:nth-child(2) {
+            border-left: variables.$grey-border;
+            border-right: variables.$grey-border;
+        }
+
+        &-name {
+            font-weight: 700;
+            font-size: 22px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .info-banner {
+        &__inner {
+            flex-direction: column;
+        }
+
+        &__item {
+            &:nth-child(2) {
+                border-right: none;
+                border-left: none;
+                border-top: variables.$grey-border;
+                border-bottom: variables.$grey-border;
+            }
+        }
+    }
+}
