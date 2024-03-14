@@ -4,18 +4,27 @@
 .grid-gallery {
     display: grid;
     grid-template-columns: repeat(11, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 130px);
     gap: 5px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .gallery-item {
+    min-width: 130px;
     & img {
         @include mixins.image;
     }
 }
 
-@media screen and (max-width: 1220px){
+@media screen and (max-width: 560px){
     .grid-gallery {
-        grid-template-columns: repeat(18, 1fr);
+        grid-template-rows: repeat(2, 100px);
+    }
+    .gallery-item {
+        min-width: 100px;
     }
 }

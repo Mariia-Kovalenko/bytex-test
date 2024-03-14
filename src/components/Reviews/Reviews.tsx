@@ -1,18 +1,23 @@
 import Slider from "react-slick";
-import GridGAllery from "../../common/GridGallery/GridGAllery";
+import GridGallery from "../../common/GridGallery/GridGallery";
 import Review from "../../common/Review/Review";
 import SliderCarousel from "../../common/Slider/Slider";
 import Title from "../../common/Title/Title";
-import { FEATURED_REVIEW, PRODUCT_BUTTON_TEXT, REVIEWS } from "../../utils/constants";
+import {
+    FEATURED_REVIEW,
+    PRODUCT_BUTTON_TEXT,
+    REVIEWS,
+} from "../../utils/constants";
 import "./Reviews.scss";
 import { useRef } from "react";
 import Button from "../../common/Button/Button";
 import Rating from "../../common/Rating/Rating";
+import { NextArrow, PrevArrow } from "../Description/Description";
 
 export default function Reviews() {
     const sliderRef = useRef<Slider>(null);
+    
     const gallery = [];
-
     for (let i = 0; i < 22; i++) {
         gallery.push(`./gallery-${i + 1}.jpg`);
     }
@@ -23,23 +28,6 @@ export default function Reviews() {
         ));
     };
 
-    const renderArrows = () => (
-        <div className="arrows">
-            <button
-                className="prev"
-                onClick={() => sliderRef.current?.slickPrev()}
-            >
-                <img src="./arrow-left.svg" alt="prev" />
-            </button>
-            <button
-                className="next"
-                onClick={() => sliderRef.current?.slickNext()}
-            >
-                <img src="./arrow-right.svg" alt="next" />
-            </button>
-        </div>
-    );
-
     const settings = {
         dots: false,
         arrows: true,
@@ -49,41 +37,45 @@ export default function Reviews() {
         slidesToShow: 3,
         slidesToScroll: 1,
         swipeToSlide: false,
+        nextArrow: <NextArrow moveToNext={() => sliderRef.current?.slickNext()} />,
+        prevArrow: <PrevArrow moveToPrev={() => sliderRef.current?.slickPrev()} />,
         responsive: [
             {
                 breakpoint: 1200,
                 settings: {
                     slidesToShow: 2,
-                    dots: true
+                    dots: true,
                 },
             },
             {
-                breakpoint: 768,
+                breakpoint: 600,
                 settings: {
                     slidesToShow: 1,
-                    dots: true
+                    dots: true,
+                    infinite: true
                 },
             },
         ],
     };
 
     return (
-        <div className="reviews">
+        <section className="reviews">
             <div className="reviews__title">
-                <Title text="What are our fans saying?" type="section" />
-                <p className="reviews__subtitle">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Fusce lobortis sapien facilisis tincidunt pellentesque. In
-                    eget ipsum et felis finibus consequat. Fusce non nibh
-                    luctus.
-                </p>
+                <div className="section-title-center">
+                    <Title text="What are our fans saying?" type="section" />
+                    <p className="reviews__subtitle">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Fusce lobortis sapien facilisis tincidunt pellentesque.
+                        In eget ipsum et felis finibus consequat. Fusce non nibh
+                        luctus.
+                    </p>
+                </div>
             </div>
 
-            <GridGAllery galleryItems={gallery} />
+            <GridGallery galleryItems={gallery} />
 
             <div className="container">
                 <div className="reviews__slider">
-                    {renderArrows()}
                     <Slider ref={sliderRef} {...settings}>
                         {renderReviews()}
                     </Slider>
@@ -94,6 +86,6 @@ export default function Reviews() {
                     <Rating rating={5} info={FEATURED_REVIEW.info} />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
